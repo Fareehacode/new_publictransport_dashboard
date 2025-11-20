@@ -45,6 +45,6 @@ All raw data comes from the official NSW Open Data Portal:<br />
       - GTFS: Timetables Complete - https://opendata.transport.nsw.gov.au/dataset/timetables-complete-gtfs<br />
 <br />
 👥 CONTRIBUTERS<br />
-- Fareeha Mulla<br />
-- Spiti Choudhary<br />
+ - Fareeha Mulla<br />
+ - Spiti Choudhary<br />
 <br />
