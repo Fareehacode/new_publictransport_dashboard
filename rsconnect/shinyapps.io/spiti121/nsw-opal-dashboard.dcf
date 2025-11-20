@@ -1,0 +1,10 @@
+name: nsw-opal-dashboard
+title:
+username: spiti121
+account: spiti121
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 16073065
+bundleId: 11181479
+url: https://spiti121.shinyapps.io/nsw-opal-dashboard/
+version: 1
