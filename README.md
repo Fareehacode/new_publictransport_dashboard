@@ -12,6 +12,7 @@ You can access the fully deployed dashboard here: https://spiti121.shinyapps.io/
 <br />
 📁 PROJECT STRUCTURE<br />
 Below is a list of all major files and folders contained in the ZIP/GitHub repository, along with short summaries of their purpose.<br />
+<br />
   1. app/ (Shiny Application Folder)<br />
      This folder contains everything required to run the dashboard.<br />
           - app.R (The main Shiny application file that builds the UI, server logic, charts, maps, filters, and KPIs.)<br />
@@ -21,18 +22,18 @@ Below is a list of all major files and folders contained in the ZIP/GitHub repos
                 &emsp;- stop_taps.csv (Stop-level tap activity with matched stop IDs and GTFS coordinates.)<br />
             &ensp; - data/raw/<br />
                 &emsp;- stop_locations.csv (Extracted GTFS stop coordinates (lat/lon) for bubble mapping.)<br />
+<br />
   2. scripts/ (Data Preprocessing Scripts)<br />
      This script prepares raw Opal and GTFS data before feeding them into the Shiny app.<br />
           - 02_data_prep.R (Cleans and merges Opal data files).<br />
           - 03_match_stops_gtfs.R (Matches Opal stop identifiers/postcodes with GTFS stop names and coordinates.)<br />
+          <br />
   3. README.md<br />
      The file you are reading now — describes project purpose, structure, and usage instructions.<br />
 <br />
 🖥️ INSTRUCTIONS FOR RUNNING LOCALLY<br />
     1. Install required packages:<br />
-        &ensp;install.packages(c(<br />
-          &emsp;;"shiny", "tidyverse", "leaflet", "plotly", "DT", "lubridate", "bslib", "scales"<br />
-        &ensp;))<br />
+        &ensp;install.packages(c("shiny", "tidyverse", "leaflet", "plotly", "DT", "lubridate", "bslib", "scales"))<br />
     2. Set working directory to the /app folder<br />
         &ensp;setwd("path/to/app")<br />
     3. Run the application<br />
