@@ -29,7 +29,7 @@ Below is a list of all major files and folders contained in the ZIP/GitHub repos
           - 03_match_stops_gtfs.R (Matches Opal stop identifiers/postcodes with GTFS stop names and coordinates.)<br />
           <br />
   3. README.md<br />
-     The file you are reading now — describes project purpose, structure, and usage instructions.<br />
+     The file you are reading now (describes project purpose, structure, and usage instructions.)<br />
 <br />
 🖥️ INSTRUCTIONS FOR RUNNING LOCALLY<br />
 ⚠️ We could not upload data sets on github because of storage restrictions, please download datasets before running the code locally!!! <br />
