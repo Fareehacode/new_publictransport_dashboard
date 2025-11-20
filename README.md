@@ -3,7 +3,7 @@ This project is an interactive dashboard built using R Shiny to analyse public t
 The dashboard combines Opal Tap-On/Tap-Off data with GTFS stop coordinates to visualise:<br />
  - Tap intensity across stops and stations<br />
  - Busiest locations across the network<br />
- - Time-based travel demand trends<br />
+ - Time-based travel demand trends<br /> 
  - Weekday vs weekend behaviour<br />
  - Mode-specific usage patterns (Train, Bus, Ferry, Light Rail)<br />
 <br />
