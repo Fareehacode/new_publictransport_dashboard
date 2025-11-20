@@ -16,11 +16,11 @@ Below is a list of all major files and folders contained in the ZIP/GitHub repos
      This folder contains everything required to run the dashboard.<br />
           - app.R (The main Shiny application file that builds the UI, server logic, charts, maps, filters, and KPIs.)<br />
           - data/ (Contains all datasets used by the dashboard.)<br />
-           &nbsp; - data/processed/<br />
-                &nbsp;&nbsp;- time_trends.csv (Cleaned and aggregated tap-on/tap-off counts by date, mode, type, and day category.)<br />
-                &nbsp;&nbsp;- stop_taps.csv (Stop-level tap activity with matched stop IDs and GTFS coordinates.)<br />
-            &nbsp;- data/raw/<br />
-                &nbsp;&nbsp;- stop_locations.csv (Extracted GTFS stop coordinates (lat/lon) for bubble mapping.)<br />
+           &ensp; - data/processed/<br />
+                &emsp;- time_trends.csv (Cleaned and aggregated tap-on/tap-off counts by date, mode, type, and day category.)<br />
+                &emsp;- stop_taps.csv (Stop-level tap activity with matched stop IDs and GTFS coordinates.)<br />
+            &ensp; - data/raw/<br />
+                &emsp;- stop_locations.csv (Extracted GTFS stop coordinates (lat/lon) for bubble mapping.)<br />
   2. scripts/ (Data Preprocessing Scripts)<br />
      This script prepares raw Opal and GTFS data before feeding them into the Shiny app.<br />
           - 02_data_prep.R (Cleans and merges Opal data files).<br />
@@ -30,13 +30,13 @@ Below is a list of all major files and folders contained in the ZIP/GitHub repos
 <br />
 🖥️ INSTRUCTIONS FOR RUNNING LOCALLY<br />
     1. Install required packages:<br />
-        &nbsp;install.packages(c(<br />
-          &nbsp;&nbsp;"shiny", "tidyverse", "leaflet", "plotly", "DT", "lubridate", "bslib", "scales"<br />
-        &nbsp;))<br />
+        &ensp;install.packages(c(<br />
+          &emsp;;"shiny", "tidyverse", "leaflet", "plotly", "DT", "lubridate", "bslib", "scales"<br />
+        &ensp;))<br />
     2. Set working directory to the /app folder<br />
-        &nbsp;setwd("path/to/app")<br />
+        &ensp;setwd("path/to/app")<br />
     3. Run the application<br />
-        &nbsp;shiny::runApp()<br />
+        &ensp;shiny::runApp()<br />
 <br />
 🧩 DATA SOURCES<br />
 All raw data comes from the official NSW Open Data Portal:<br />
