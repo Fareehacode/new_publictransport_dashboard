@@ -32,6 +32,7 @@ Below is a list of all major files and folders contained in the ZIP/GitHub repos
      The file you are reading now — describes project purpose, structure, and usage instructions.<br />
 <br />
 🖥️ INSTRUCTIONS FOR RUNNING LOCALLY<br />
+⚠️ We could not upload data sets on github because of storage restrictions, please download datasets before running the code locally!!! <br />
     1. Install required packages:<br />
         &ensp;install.packages(c("shiny", "tidyverse", "leaflet", "plotly", "DT", "lubridate", "bslib", "scales"))<br />
     2. Set working directory to the /app folder<br />
