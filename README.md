@@ -16,11 +16,11 @@ Below is a list of all major files and folders contained in the ZIP/GitHub repos
      This folder contains everything required to run the dashboard.<br />
           - app.R (The main Shiny application file that builds the UI, server logic, charts, maps, filters, and KPIs.)<br />
           - data/ (Contains all datasets used by the dashboard.)<br />
-            - data/processed/<br />
-                - time_trends.csv (Cleaned and aggregated tap-on/tap-off counts by date, mode, type, and day category.)<br />
-                - stop_taps.csv (Stop-level tap activity with matched stop IDs and GTFS coordinates.)<br />
-            - data/raw/<br />
-                - stop_locations.csv (Extracted GTFS stop coordinates (lat/lon) for bubble mapping.)<br />
+           &nbsp; - data/processed/<br />
+                &nbsp;&nbsp;- time_trends.csv (Cleaned and aggregated tap-on/tap-off counts by date, mode, type, and day category.)<br />
+                &nbsp;&nbsp;- stop_taps.csv (Stop-level tap activity with matched stop IDs and GTFS coordinates.)<br />
+            &nbsp;- data/raw/<br />
+                &nbsp;&nbsp;- stop_locations.csv (Extracted GTFS stop coordinates (lat/lon) for bubble mapping.)<br />
   2. scripts/ (Data Preprocessing Scripts)<br />
      This script prepares raw Opal and GTFS data before feeding them into the Shiny app.<br />
           - 02_data_prep.R (Cleans and merges Opal data files).<br />
@@ -30,20 +30,20 @@ Below is a list of all major files and folders contained in the ZIP/GitHub repos
 <br />
 🖥️ INSTRUCTIONS FOR RUNNING LOCALLY<br />
     1. Install required packages:<br />
-        install.packages(c(<br />
-          "shiny", "tidyverse", "leaflet", "plotly", "DT", "lubridate", "bslib", "scales"<br />
-        ))<br />
+        &nbsp;install.packages(c(<br />
+          &nbsp;&nbsp;"shiny", "tidyverse", "leaflet", "plotly", "DT", "lubridate", "bslib", "scales"<br />
+        &nbsp;))<br />
     2. Set working directory to the /app folder<br />
-        setwd("path/to/app")<br />
+        &nbsp;setwd("path/to/app")<br />
     3. Run the application<br />
-        shiny::runApp()<br />
+        &nbsp;shiny::runApp()<br />
 <br />
 🧩 DATA SOURCES<br />
 All raw data comes from the official NSW Open Data Portal:<br />
-      Opal Tap-On/Tap-Off Dataset (2020) - https://opendata.transport.nsw.gov.au/dataset/opal-tap-on-and-tap-off-release-3-2020<br />
-      GTFS: Timetables Complete - https://opendata.transport.nsw.gov.au/dataset/timetables-complete-gtfs<br />
+      - Opal Tap-On/Tap-Off Dataset (2020) - https://opendata.transport.nsw.gov.au/dataset/opal-tap-on-and-tap-off-release-3-2020<br />
+      - GTFS: Timetables Complete - https://opendata.transport.nsw.gov.au/dataset/timetables-complete-gtfs<br />
 <br />
 👥 CONTRIBUTERS<br />
-Fareeha Mulla<br />
-Spiti Choudhary<br />
+- Fareeha Mulla<br />
+- Spiti Choudhary<br />
 <br />
