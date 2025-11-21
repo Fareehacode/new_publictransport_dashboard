@@ -23,10 +23,10 @@ cat("GTFS stops:", nrow(gtfs_stops), "\n")
 normalise_name <- function(x) {
   x %>%
     tolower() %>%
-    str_replace_all("\\([^)]+\\)", " ") %>%   # remove things in parentheses
-    str_replace_all("_", " ") %>%            # underscores -> spaces
+    str_replace_all("\\([^)]+\\)", " ") %>%   
+    str_replace_all("_", " ") %>%            
     str_replace_all("-", " ") %>%
-    str_replace_all("[^a-z0-9 ]", " ") %>%   # remove non-alphanumeric
+    str_replace_all("[^a-z0-9 ]", " ") %>%   
     str_squish()
 }
 
@@ -73,3 +73,4 @@ unmatched_path <- "data/raw/unmatched_stops.csv"
 write_csv(unmatched_stops, unmatched_path)
 
 cat("Saved unmatched stops to:", unmatched_path, "\n")
+
