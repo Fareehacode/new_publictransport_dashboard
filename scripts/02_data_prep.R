@@ -120,7 +120,7 @@ read_location <- function(file) {
 time_loc <- map_dfr(time_loc_files, read_time_loc)
 location_data <- map_dfr(location_files, read_location)
 
-# POSTCODE TAPS
+
 postcode_taps <- bind_rows(
   time_loc %>% filter(!is.na(postcode)),
   location_data
@@ -130,7 +130,7 @@ postcode_taps <- bind_rows(
 
 write_csv(postcode_taps, file.path(proc_dir, "postcode_taps.csv"))
 
-# STOP TAPS (for bar chart + table)
+
 stop_taps <- time_loc %>%
   filter(!is.na(stop_clean)) %>%
   group_by(mode, Date, stop = stop_clean, tap_type) %>%
@@ -139,3 +139,4 @@ stop_taps <- time_loc %>%
 write_csv(stop_taps, file.path(proc_dir, "stop_taps.csv"))
 
 cat("All processing complete ✔\n")
+
