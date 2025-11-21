@@ -14,14 +14,14 @@ time_trends <- read_csv("../data/processed/time_trends.csv", show_col_types = FA
 stop_taps   <- read_csv("../data/processed/stop_taps.csv", show_col_types = FALSE)
 stop_locations <- read_csv("../data/raw/stop_locations.csv", show_col_types = FALSE)
 
-# Ensure Date columns
+
 time_trends <- time_trends %>%
   mutate(Date = as.Date(Date))
 
 stop_taps <- stop_taps %>%
   mutate(Date = as.Date(Date))
 
-# Add weekday/day_type
+
 time_trends <- time_trends %>%
   mutate(
     weekday  = wday(Date, label = TRUE, week_start = 1),
@@ -34,7 +34,7 @@ stop_taps <- stop_taps %>%
     day_type = if_else(weekday %in% c("Sat", "Sun"), "Weekend", "Weekday")
   )
 
-# Join coordinates from GTFS-matched stop_locations
+
 stop_taps <- stop_taps %>%
   left_join(stop_locations, by = "stop") %>%
   filter(!is.na(lat), !is.na(lon))
@@ -109,7 +109,7 @@ ui <- fluidPage(
     "))
   ),
   
-  # Header
+  
   div(
     class = "top-bar",
     h3("NSW Public Transport Demand Dashboard", style = "margin:0;color:#eee;"),
@@ -119,7 +119,7 @@ ui <- fluidPage(
     )
   ),
   
-  # KPI Row
+  
   fluidRow(
     column(
       3,
@@ -159,7 +159,7 @@ ui <- fluidPage(
     )
   ),
   
-  # Filters + Map + Top 10
+  
   fluidRow(
     column(
       3,
@@ -203,7 +203,7 @@ ui <- fluidPage(
     )
   ),
   
-  # Time series
+  
   fluidRow(
     column(
       12,
@@ -212,7 +212,7 @@ ui <- fluidPage(
     )
   ),
   
-  # Table
+  
   fluidRow(
     column(
       12,
@@ -225,7 +225,7 @@ ui <- fluidPage(
 
 server <- function(input, output, session) {
   
-  # ---- Filtered time trends (for KPIs + time series) ----
+  
   filtered_trends <- reactive({
     df <- time_trends
     
@@ -346,7 +346,7 @@ server <- function(input, output, session) {
     pal <- colorNumeric("YlOrRd", df$Total)
     
     leaflet(df) %>%
-      addTiles() %>%  # default light tile (unchanged)
+      addTiles() %>%  
       addCircleMarkers(
         lng = ~lon,
         lat = ~lat,
